@@ -4,7 +4,7 @@
 #
 Name     : mvn-lucene-solr
 Version  : 8.2.0
-Release  : 2
+Release  : 3
 URL      : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source0  : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-analyzers-common/4.10.4/lucene-analyzers-common-4.10.4.jar
@@ -125,6 +125,8 @@ Source115  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-sugge
 Source116  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-suggest/6.3.0/lucene-suggest-6.3.0.pom
 Source117  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-suggest/7.3.1/lucene-suggest-7.3.1.jar
 Source118  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-suggest/7.3.1/lucene-suggest-7.3.1.pom
+Source119  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
+Source120  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -167,7 +169,11 @@ license components for the mvn-lucene-solr package.
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/mvn-lucene-solr
+cp lucene/LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/lucene_LICENSE.txt
 cp lucene/tools/src/java/org/apache/lucene/validation/LicenseCheckTask.java %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/lucene_tools_src_java_org_apache_lucene_validation_LicenseCheckTask.java
+cp lucene/tools/src/java/org/apache/lucene/validation/LicenseType.java %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/lucene_tools_src_java_org_apache_lucene_validation_LicenseType.java
+cp solr/LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/solr_LICENSE.txt
+cp solr/solr-ref-guide/src/copying-fields.adoc %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/solr_solr-ref-guide_src_copying-fields.adoc
 cp solr/solr-ref-guide/src/fonts/Noto_Sans/LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/solr_solr-ref-guide_src_fonts_Noto_Sans_LICENSE.txt
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.10.4
 cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.10.4/lucene-analyzers-common-4.10.4.jar
@@ -523,6 +529,12 @@ cp %{SOURCE117} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-suggest/7.3.1
 cp %{SOURCE118} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-suggest/7.3.1/lucene-suggest-7.3.1.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1
+cp %{SOURCE119} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1
+cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -565,6 +577,8 @@ cp %{SOURCE118} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/5.5.0/lucene-highlighter-5.5.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/6.3.0/lucene-highlighter-6.3.0.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/6.3.0/lucene-highlighter-6.3.0.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-join/4.10.4/lucene-join-4.10.4.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-join/4.10.4/lucene-join-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-join/5.5.0/lucene-join-5.5.0.jar
@@ -650,5 +664,9 @@ cp %{SOURCE118} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 
 %files license
 %defattr(0644,root,root,0755)
+/usr/share/package-licenses/mvn-lucene-solr/lucene_LICENSE.txt
 /usr/share/package-licenses/mvn-lucene-solr/lucene_tools_src_java_org_apache_lucene_validation_LicenseCheckTask.java
+/usr/share/package-licenses/mvn-lucene-solr/lucene_tools_src_java_org_apache_lucene_validation_LicenseType.java
+/usr/share/package-licenses/mvn-lucene-solr/solr_LICENSE.txt
+/usr/share/package-licenses/mvn-lucene-solr/solr_solr-ref-guide_src_copying-fields.adoc
 /usr/share/package-licenses/mvn-lucene-solr/solr_solr-ref-guide_src_fonts_Noto_Sans_LICENSE.txt
