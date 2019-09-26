@@ -4,7 +4,7 @@
 #
 Name     : mvn-lucene-solr
 Version  : 8.2.0
-Release  : 4
+Release  : 5
 URL      : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source0  : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-analyzers-common/4.10.4/lucene-analyzers-common-4.10.4.jar
@@ -125,15 +125,22 @@ Source115  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-sugge
 Source116  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-suggest/6.3.0/lucene-suggest-6.3.0.pom
 Source117  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-suggest/7.3.1/lucene-suggest-7.3.1.jar
 Source118  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-suggest/7.3.1/lucene-suggest-7.3.1.pom
-Source119  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.jar
-Source120  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.pom
-Source121  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.jar
-Source122  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.pom
-Source123  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
-Source124  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
-Source125  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
-Source126  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
-Source127  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
+Source119  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/5.5.5/lucene-analyzers-common-5.5.5.jar
+Source120  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/5.5.5/lucene-analyzers-common-5.5.5.pom
+Source121  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.jar
+Source122  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.pom
+Source123  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/5.5.5/lucene-core-5.5.5.jar
+Source124  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/5.5.5/lucene-core-5.5.5.pom
+Source125  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.jar
+Source126  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.pom
+Source127  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
+Source128  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
+Source129  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-parent/5.5.5/lucene-parent-5.5.5.pom
+Source130  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
+Source131  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.jar
+Source132  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.pom
+Source133  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
+Source134  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 CC-BY-2.5
@@ -537,32 +544,53 @@ cp %{SOURCE117} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-suggest/7.3.1
 cp %{SOURCE118} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-suggest/7.3.1/lucene-suggest-7.3.1.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0
-cp %{SOURCE119} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/5.5.5
+cp %{SOURCE119} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/5.5.5/lucene-analyzers-common-5.5.5.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/5.5.5
+cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/5.5.5/lucene-analyzers-common-5.5.5.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0
-cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.pom
+cp %{SOURCE121} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0
+cp %{SOURCE122} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/5.5.5
+cp %{SOURCE123} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/5.5.5/lucene-core-5.5.5.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/5.5.5
+cp %{SOURCE124} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/5.5.5/lucene-core-5.5.5.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0
-cp %{SOURCE121} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.jar
+cp %{SOURCE125} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0
-cp %{SOURCE122} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.pom
+cp %{SOURCE126} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1
-cp %{SOURCE123} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
+cp %{SOURCE127} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1
-cp %{SOURCE124} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
+cp %{SOURCE128} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/5.5.5
+cp %{SOURCE129} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/5.5.5/lucene-parent-5.5.5.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.6.0
-cp %{SOURCE125} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
+cp %{SOURCE130} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5
+cp %{SOURCE131} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5
+cp %{SOURCE132} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0
-cp %{SOURCE126} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
+cp %{SOURCE133} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0
-cp %{SOURCE127} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
+cp %{SOURCE134} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
 
 
 %files
@@ -574,6 +602,8 @@ cp %{SOURCE127} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.10.4/lucene-analyzers-common-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/5.5.0/lucene-analyzers-common-5.5.0.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/5.5.0/lucene-analyzers-common-5.5.0.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/5.5.5/lucene-analyzers-common-5.5.5.jar
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/5.5.5/lucene-analyzers-common-5.5.5.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/6.3.0/lucene-analyzers-common-6.3.0.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/6.3.0/lucene-analyzers-common-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.3.1/lucene-analyzers-common-7.3.1.jar
@@ -590,6 +620,8 @@ cp %{SOURCE127} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-core/4.10.4/lucene-core-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-core/5.5.0/lucene-core-5.5.0.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-core/5.5.0/lucene-core-5.5.0.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/5.5.5/lucene-core-5.5.5.jar
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/5.5.5/lucene-core-5.5.5.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-core/6.3.0/lucene-core-6.3.0.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-core/6.3.0/lucene-core-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.3.1/lucene-core-7.3.1.jar
@@ -638,6 +670,7 @@ cp %{SOURCE127} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-misc/7.3.1/lucene-misc-7.3.1.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/4.10.4/lucene-parent-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/5.5.0/lucene-parent-5.5.0.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/5.5.5/lucene-parent-5.5.5.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/6.3.0/lucene-parent-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.3.1/lucene-parent-7.3.1.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
@@ -653,6 +686,8 @@ cp %{SOURCE127} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/4.10.4/lucene-queryparser-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.0/lucene-queryparser-5.5.0.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.0/lucene-queryparser-5.5.0.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.jar
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/6.3.0/lucene-queryparser-6.3.0.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/6.3.0/lucene-queryparser-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.3.1/lucene-queryparser-7.3.1.jar
