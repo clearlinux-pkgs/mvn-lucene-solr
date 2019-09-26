@@ -4,7 +4,7 @@
 #
 Name     : mvn-lucene-solr
 Version  : 8.2.0
-Release  : 6
+Release  : 7
 URL      : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source0  : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-analyzers-common/4.10.4/lucene-analyzers-common-4.10.4.jar
@@ -145,7 +145,8 @@ Source135  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser
 Source136  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
 Source137  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.jar
 Source138  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.pom
-Source139  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-solr-grandparent/7.6.0/lucene-solr-grandparent-7.6.0.pom
+Source139  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-solr-grandparent/5.5.5/lucene-solr-grandparent-5.5.5.pom
+Source140  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-solr-grandparent/7.6.0/lucene-solr-grandparent-7.6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 CC-BY-2.5
@@ -609,8 +610,11 @@ cp %{SOURCE137} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.6.0
 cp %{SOURCE138} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/5.5.5
+cp %{SOURCE139} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/5.5.5/lucene-solr-grandparent-5.5.5.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/7.6.0
-cp %{SOURCE139} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/7.6.0/lucene-solr-grandparent-7.6.0.pom
+cp %{SOURCE140} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/7.6.0/lucene-solr-grandparent-7.6.0.pom
 
 
 %files
@@ -728,6 +732,7 @@ cp %{SOURCE139} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/4.10.4/lucene-solr-grandparent-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/5.5.0/lucene-solr-grandparent-5.5.0.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/5.5.5/lucene-solr-grandparent-5.5.5.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/6.3.0/lucene-solr-grandparent-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/7.3.1/lucene-solr-grandparent-7.3.1.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/7.6.0/lucene-solr-grandparent-7.6.0.pom
