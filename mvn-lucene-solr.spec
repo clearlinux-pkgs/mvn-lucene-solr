@@ -4,7 +4,7 @@
 #
 Name     : mvn-lucene-solr
 Version  : 8.2.0
-Release  : 5
+Release  : 6
 URL      : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source0  : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-analyzers-common/4.10.4/lucene-analyzers-common-4.10.4.jar
@@ -137,10 +137,15 @@ Source127  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter
 Source128  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
 Source129  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-parent/5.5.5/lucene-parent-5.5.5.pom
 Source130  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
-Source131  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.jar
-Source132  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.pom
-Source133  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
-Source134  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
+Source131  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queries/7.6.0/lucene-queries-7.6.0.jar
+Source132  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queries/7.6.0/lucene-queries-7.6.0.pom
+Source133  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.jar
+Source134  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.pom
+Source135  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
+Source136  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
+Source137  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.jar
+Source138  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.pom
+Source139  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-solr-grandparent/7.6.0/lucene-solr-grandparent-7.6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 CC-BY-2.5
@@ -580,17 +585,32 @@ cp %{SOURCE129} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.6.0
 cp %{SOURCE130} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5
-cp %{SOURCE131} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/7.6.0
+cp %{SOURCE131} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/7.6.0/lucene-queries-7.6.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/7.6.0
+cp %{SOURCE132} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/7.6.0/lucene-queries-7.6.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5
-cp %{SOURCE132} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.pom
+cp %{SOURCE133} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5
+cp %{SOURCE134} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.5/lucene-queryparser-5.5.5.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0
-cp %{SOURCE133} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
+cp %{SOURCE135} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0
-cp %{SOURCE134} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
+cp %{SOURCE136} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.6.0
+cp %{SOURCE137} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.6.0
+cp %{SOURCE138} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/7.6.0
+cp %{SOURCE139} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/7.6.0/lucene-solr-grandparent-7.6.0.pom
 
 
 %files
@@ -682,6 +702,8 @@ cp %{SOURCE134} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/6.3.0/lucene-queries-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/7.3.1/lucene-queries-7.3.1.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/7.3.1/lucene-queries-7.3.1.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/7.6.0/lucene-queries-7.6.0.jar
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/7.6.0/lucene-queries-7.6.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/4.10.4/lucene-queryparser-4.10.4.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/4.10.4/lucene-queryparser-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/5.5.0/lucene-queryparser-5.5.0.jar
@@ -702,10 +724,13 @@ cp %{SOURCE134} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/6.3.0/lucene-sandbox-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.3.1/lucene-sandbox-7.3.1.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.3.1/lucene-sandbox-7.3.1.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.jar
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/7.6.0/lucene-sandbox-7.6.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/4.10.4/lucene-solr-grandparent-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/5.5.0/lucene-solr-grandparent-5.5.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/6.3.0/lucene-solr-grandparent-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/7.3.1/lucene-solr-grandparent-7.3.1.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-solr-grandparent/7.6.0/lucene-solr-grandparent-7.6.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-spatial-extras/6.3.0/lucene-spatial-extras-6.3.0.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-spatial-extras/6.3.0/lucene-spatial-extras-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-spatial-extras/7.3.1/lucene-spatial-extras-7.3.1.jar

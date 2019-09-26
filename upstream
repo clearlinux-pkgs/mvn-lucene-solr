@@ -133,3 +133,8 @@ c34bcd9274859dc07cfed2a935aaca90c4f4b861/lucene-core-5.5.5.jar
 6c965eb5838a2ba58b0de0fd860a420dcda11937/lucene-queryparser-5.5.5.jar
 fea7a30395e93435d48e4f36b9e91f64d7903db9/lucene-queryparser-5.5.5.pom
 2f92f69fb4ea41aa6a554dd501ac43111d4d6006/lucene-parent-5.5.5.pom
+912c9a2ade54d5b531a20d773f282d8caedd9637/lucene-queries-7.6.0.jar
+c9dfbbcd6e856df9414d29f947efab6ed40c5737/lucene-queries-7.6.0.pom
+cabb18835c41c7ac32a1d407139c7a6f3f82967e/lucene-sandbox-7.6.0.jar
+c8c7fa1ef4bc71be21ce25ce5ef31c90795d35be/lucene-sandbox-7.6.0.pom
+5dd5733987b4c3fc4f95bf855e196e4b744b18d5/lucene-solr-grandparent-7.6.0.pom
