@@ -4,7 +4,7 @@
 #
 Name     : mvn-lucene-solr
 Version  : 8.2.0
-Release  : 3
+Release  : 4
 URL      : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source0  : https://github.com/apache/lucene-solr/archive/releases/lucene-solr/8.2.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-analyzers-common/4.10.4/lucene-analyzers-common-4.10.4.jar
@@ -125,11 +125,18 @@ Source115  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-sugge
 Source116  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-suggest/6.3.0/lucene-suggest-6.3.0.pom
 Source117  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-suggest/7.3.1/lucene-suggest-7.3.1.jar
 Source118  : https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-suggest/7.3.1/lucene-suggest-7.3.1.pom
-Source119  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
-Source120  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
+Source119  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.jar
+Source120  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.pom
+Source121  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.jar
+Source122  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.pom
+Source123  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
+Source124  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
+Source125  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
+Source126  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
+Source127  : https://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : Apache-2.0
+License  : Apache-2.0 CC-BY-2.5
 Requires: mvn-lucene-solr-data = %{version}-%{release}
 Requires: mvn-lucene-solr-license = %{version}-%{release}
 Requires: Jinja2
@@ -173,6 +180,7 @@ cp lucene/LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/lu
 cp lucene/tools/src/java/org/apache/lucene/validation/LicenseCheckTask.java %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/lucene_tools_src_java_org_apache_lucene_validation_LicenseCheckTask.java
 cp lucene/tools/src/java/org/apache/lucene/validation/LicenseType.java %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/lucene_tools_src_java_org_apache_lucene_validation_LicenseType.java
 cp solr/LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/solr_LICENSE.txt
+cp solr/example/films/films-LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/solr_example_films_films-LICENSE.txt
 cp solr/solr-ref-guide/src/copying-fields.adoc %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/solr_solr-ref-guide_src_copying-fields.adoc
 cp solr/solr-ref-guide/src/fonts/Noto_Sans/LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-lucene-solr/solr_solr-ref-guide_src_fonts_Noto_Sans_LICENSE.txt
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.10.4
@@ -529,11 +537,32 @@ cp %{SOURCE117} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-suggest/7.3.1
 cp %{SOURCE118} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-suggest/7.3.1/lucene-suggest-7.3.1.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1
-cp %{SOURCE119} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0
+cp %{SOURCE119} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0
+cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0
+cp %{SOURCE121} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0
+cp %{SOURCE122} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1
-cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
+cp %{SOURCE123} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1
+cp %{SOURCE124} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-highlighter/7.3.1/lucene-highlighter-7.3.1.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.6.0
+cp %{SOURCE125} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0
+cp %{SOURCE126} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0
+cp %{SOURCE127} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
 
 
 %files
@@ -549,6 +578,8 @@ cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/6.3.0/lucene-analyzers-common-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.3.1/lucene-analyzers-common-7.3.1.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.3.1/lucene-analyzers-common-7.3.1.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.jar
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-analyzers-common/7.6.0/lucene-analyzers-common-7.6.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-backward-codecs/5.5.0/lucene-backward-codecs-5.5.0.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-backward-codecs/5.5.0/lucene-backward-codecs-5.5.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-backward-codecs/6.3.0/lucene-backward-codecs-6.3.0.jar
@@ -563,6 +594,8 @@ cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-core/6.3.0/lucene-core-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.3.1/lucene-core-7.3.1.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.3.1/lucene-core-7.3.1.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.jar
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-core/7.6.0/lucene-core-7.6.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-grouping/4.10.4/lucene-grouping-4.10.4.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-grouping/4.10.4/lucene-grouping-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-grouping/5.5.0/lucene-grouping-5.5.0.jar
@@ -607,6 +640,7 @@ cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/5.5.0/lucene-parent-5.5.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/6.3.0/lucene-parent-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.3.1/lucene-parent-7.3.1.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-parent/7.6.0/lucene-parent-7.6.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/4.10.4/lucene-queries-4.10.4.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/4.10.4/lucene-queries-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queries/5.5.0/lucene-queries-5.5.0.jar
@@ -623,6 +657,8 @@ cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/6.3.0/lucene-queryparser-6.3.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.3.1/lucene-queryparser-7.3.1.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.3.1/lucene-queryparser-7.3.1.pom
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.jar
+/usr/share/java/.m2/repository/org/apache/lucene/lucene-queryparser/7.6.0/lucene-queryparser-7.6.0.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/4.10.4/lucene-sandbox-4.10.4.jar
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/4.10.4/lucene-sandbox-4.10.4.pom
 /usr/share/java/.m2/repository/org/apache/lucene/lucene-sandbox/5.5.0/lucene-sandbox-5.5.0.jar
@@ -668,5 +704,6 @@ cp %{SOURCE120} %{buildroot}/usr/share/java/.m2/repository/org/apache/lucene/luc
 /usr/share/package-licenses/mvn-lucene-solr/lucene_tools_src_java_org_apache_lucene_validation_LicenseCheckTask.java
 /usr/share/package-licenses/mvn-lucene-solr/lucene_tools_src_java_org_apache_lucene_validation_LicenseType.java
 /usr/share/package-licenses/mvn-lucene-solr/solr_LICENSE.txt
+/usr/share/package-licenses/mvn-lucene-solr/solr_example_films_films-LICENSE.txt
 /usr/share/package-licenses/mvn-lucene-solr/solr_solr-ref-guide_src_copying-fields.adoc
 /usr/share/package-licenses/mvn-lucene-solr/solr_solr-ref-guide_src_fonts_Noto_Sans_LICENSE.txt

@@ -119,3 +119,10 @@ ed5d8ee5cd7edcad5d4ffca2b4540ccc844e9bb0/lucene-suggest-6.3.0.jar
 6695e686c7cfbf632deed1e34557ae14724d27f0/lucene-suggest-7.3.1.pom
 01e945c65876a1eab97a5db40e92c981c5a65915/lucene-highlighter-7.3.1.jar
 467f73cc810b73b84feec81ecc18bfe5b71171e3/lucene-highlighter-7.3.1.pom
+49538b368b77aba917c54c0a7941dbe002e3ebba/lucene-core-7.6.0.jar
+a8fefcfa156aca47fc3831a646f492991fa07e72/lucene-core-7.6.0.pom
+24eb35682f31253a9feff58c808f24bd4743e4b6/lucene-analyzers-common-7.6.0.jar
+30f65bf65fb5f1e02acede7079b3c2c203b1ce54/lucene-analyzers-common-7.6.0.pom
+5bc2661f3f342ea9489c5781fd64d2a06e097ddf/lucene-queryparser-7.6.0.jar
+66a3a90f0338142264b835b56075892953c815ee/lucene-queryparser-7.6.0.pom
+d9ecac16bbfc4f8050275bee0649f6498d734fdf/lucene-parent-7.6.0.pom
